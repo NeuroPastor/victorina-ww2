@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AddSecondStage extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('films', function (Blueprint $table) {
+            $table->text('link');
+            $table->integer('year');
+            $table->text('name');
+        });
+        Schema::create('2ndstage_answer', function (Blueprint $table) {
+            $table->increments('id');
+            $table->text('word');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

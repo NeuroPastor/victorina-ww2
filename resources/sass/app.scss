@@ -1,0 +1,55 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,h7{
+    font-family: 'IBM Plex Serif', serif;
+    font-weight:600;
+} 
+.vh-100{
+    min-height: 100vh;
+    max-height:100%;
+}
+.headermenu{
+    a:not(.notlink){
+        font-family: 'IBM Plex Serif', serif;
+        font-weight:600;
+        color:$dark;
+        text-transform: uppercase;
+        transition:all .3s ease;
+        &:after{
+            content:"";
+            border-bottom:1px dashed $dark;
+            width:0;
+            transition:all .3s ease;
+            display: block;
+            margin:0 auto;
+        }
+        &:hover:after{
+            content:"";
+            border-bottom:1px dashed $dark;
+            width:100%;
+            transition:all .3s ease;
+        }
+        &.active{
+            &:after{
+                content:"";
+                border-bottom:1px dashed $dark;
+                width:100%;
+                transition:all .3s ease;
+            }
+        }
+    }
+}
+
+
+@import 'custom';
